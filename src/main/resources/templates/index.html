@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -8,16 +8,9 @@
     <title>Document</title>
 </head>
 <body>
-    <h1> 인덱스 페이지 </h1>
+    <h1> 메인 페이지 </h1>
 
-    <div>
-        <a href="/member/register">회원 가입</a>
-        |
-        <a href="/member/login">로그인</a>
-        |
-        <a href="/member/logout">로그아웃</a>
-        <hr>
-    </div>
+    <div th:replace="/fragments/layout.html :: fragment-body-menu"></div>
 
 </body>
 </html>
